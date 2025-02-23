@@ -11,6 +11,8 @@ import UIKit
 class ResultViewController: UIViewController {
     
     var bmiValue: String?
+    var adviceValue: String?
+    var colorValue: UIColor?
 
     @IBOutlet weak var bmiLabel: UILabel!
     @IBOutlet weak var adviceLabel: UILabel!
@@ -18,8 +20,9 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = self.colorValue
         self.bmiLabel.text = self.bmiValue
-
+        self.adviceLabel.text = self.adviceValue
         
     }
     
